@@ -1,8 +1,7 @@
-var router = Router();
-var bcrypt = require('bcrypt');
-var jwt = require('jsonwebtoken');
-
-var User = require('../db').import('../models/user');
+const router = require('express').Router();
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const User = require('../db').User;
 
 router.post('/signup', (req, res) => {
     User.create({
