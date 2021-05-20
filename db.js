@@ -19,7 +19,7 @@ sequelize.authenticate().then(
 );
 
 module.exports = {
-    db: sequelize,
+    sequelize,
     User: user(sequelize, Sequelize.DataTypes),
     Game: game(sequelize, Sequelize.DataTypes)
 };
